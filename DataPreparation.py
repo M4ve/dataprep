@@ -66,7 +66,7 @@ def plotdta (dta_final):
     plt.plot(dta_final.Date, dta_final.Close)
     #plt.hist(dta_final.Volume, normed=True, alpha=0.9)
 
-dta_final_scaled = dta_rescaled(dta_preparation())
+#dta_final_scaled = dta_rescaled(dta_preparation())
 
 
 def ann():
@@ -148,19 +148,21 @@ def rnn(dta_final):
     plt.xlabel("Time Periods")
     plt.show()
 
-#print("Before:")
-#print(dta_vanilla().head())
-#print(dta_vanilla().info())
-#print()
-#print ("Clean data:")
-#print(dta_preparation().head())
-#print(dta_preparation().info())
-#print()
-#print("Rescaled data:")
-#print(dta_rescaled(dta_preparation()).head())
+print("Before:")
+print(dta_vanilla().head())
+print(dta_vanilla().info())
+print()
+print ("Clean data:")
+print(dta_preparation().head())
+print(dta_preparation().info())
+print()
+print("Rescaled data:")
+print(dta_rescaled(dta_preparation()).head())
 #print(ann())
 
-rnn(dta_preparation())
+#rnn(dta_preparation())
 
-#plt.show(plotdta(dta_preparation()))                        #Visualisierung Rohdaten
+plt.show(plotdta(dta_preparation()))                        #Visualisierung Rohdaten
 #plt.show(plotdta(dta_rescaled(dta_preparation())))             #Visualisierung skalierte Daten
+
+#print(dta_preparation());
